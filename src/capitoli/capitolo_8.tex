@@ -54,16 +54,39 @@ Non tutte le situazioni permettono l'uso di vincoli così forti, ma il principio
 
 Si esaminano ora tre di questi metodi:
 \begin{itemize}
-	\item \textbf{Interlock}: obbliga a eseguire le operazioni nella sequenza dovuta. Usati soprattutto nell'ambito della sicurezza. \textbf{Per compiere un task si deve eseguire una serie di passi.}
-	\item \textbf{Lock-in}: mantiene attiva una funzione impedendo che qualcuno la interrompa prematuramente. È usato molto in ambito informatico (e.g. ogni tentativo di uscita da un'applicazione senza salvare è prevenuto da un messaggio di allerta che chiede la conferma dell'intenzione). \textbf{Per finire un task si deve compiere un'azione.}
-	\item \textbf{Lockout}: impedisce l'ingresso in uno spazio pericoloso o impedisce che succeda qualcosa. Può essere considerato l'opposto del lock-in. Un esempio di stampo informatico, sono gli \textbf{alert VM 18} che si possono trovare su alcuni siti. \textbf{Per iniziare un task si deve compiere un'azione.}
-\end{itemize}
+	\item \textbf{Interlock}: obbliga a eseguire una serie di operazioni (n maggiore di 1) nella sequenza dovuta prima di avviare l'azione richiesta. Gli interlock sono usati soprattutto come sistemi di sicurezza nei macchinari idnustriali ma anche nel mondo software come per esempio nel caso dei sistemi Captcha.
+	
+	\begin{figure}[!h]
+	\centering
+	\includegraphics[width=0.4\textwidth]{immagini/cap.png}
+	\caption{I captcha sono un esempio di interlocks.}
+\end{figure}
 
 \begin{figure}[!h]
 	\centering
-	\includegraphics[scale=0.4]{immagini/cap.png}
-	\caption{I captcha sono un esempio di interlocks.}
+	\includegraphics[width=0.5\textwidth]{src/immagini/trapano.png}
+	\caption{Per usare un trapano a colonna professionale è necessario 1) chiudere lo sportello di sicurezza; 2) armare il sistema premendo l'apposito bottone; 3) attivare il motore ruotando l'interruttore rosso. Se uno di questi passaggi viene ignorato il sistema non si attiva. Se una volta attivato il sistema, lo sportello viene aperto il motore si spegne. }
 \end{figure}
+
+	\item \textbf{Lock-in}: mantiene attiva una funzione impedendo che qualcuno la interrompa prematuramente. È usato molto in ambito informatico (e.g. ogni tentativo di uscita da un'applicazione senza salvare è prevenuto da un messaggio di allerta che chiede la conferma dell'intenzione). \textbf{Per finire un task si deve compiere un'azione.}
+	
+	\begin{figure}[!h]
+	\centering
+	\includegraphics[width=0.4\textwidth]{src/immagini/savedialog.png}
+	\caption{Il dialog dove viene proposto di salvare prima di chiudere è un esempio di lock-in dal momento che blocca "dentro" il software l'utente fino a che questo non da un ulteriore input.}
+\end{figure}
+
+
+	\item \textbf{Lockout}: impedisce l'ingresso in uno spazio pericoloso o impedisce che succeda qualcosa. Può essere considerato l'opposto del lock-in. Un esempio di stampo informatico, sono gli \textbf{alert VM 18} che si possono trovare su alcuni siti. \textbf{Per accedere ad un task si deve compiere un'azione.}
+\end{itemize}
+
+	\begin{figure}[!h]
+	\centering
+	\includegraphics[width=0.5\textwidth]{src/immagini/lockout.png}
+	\caption{Bloccare un utenza perchè ha immesso troppe volte credenziali sbagliate è un esempio di lock-out. Per superare il blocco bisogna attendere o seguire delle specifiche procedure.}
+\end{figure}
+
+
 
 \section{Activity-Centered Control}
 Il mapping spaziale dei comandi non sempre è il più opportuno.
@@ -75,3 +98,11 @@ Azionando un semplice comando si impostano una serie di oggetti per svolgere una
 Questo schema è eccellente in teoria, ma nella pratica è difficile da realizzare bene, soprattutto è necessario valutare gli \textbf{imprevisti} e le possibili risoluzioni.
 
 Per carità, il metodo è giusto, purché la gamma di attività sia scelta in modo da corrispondere alle situazioni reali. Ma anche in quel caso saranno pur necessari dei comandi manuali, perché si presenteranno sempre esigenze inattese, che richiederanno una regolazione particolare dei dispositivi.
+
+La Logitech ha prodotto una serie di telecomandi universali completamente progettati attorno al concetto degli Activity Centereed Control \url{https://www.logitech.com/it-it/harmony-universal-remotes}.
+
+	\begin{figure}[!h]
+	\centering
+	\includegraphics[width=0.5\textwidth]{src/immagini/harmony.png}
+	\caption{Il telecomando universale Harmony di Logitech consente di controllare vari dispositivi attraverso un modello di interazione basato sugli activity centered controls. Non si seleziona più il dispositivo che si vuol controllare ma l'attività che si vuol fare: Play Game, Watch TV, etc..}
+\end{figure}
