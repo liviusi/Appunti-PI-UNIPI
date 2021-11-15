@@ -206,3 +206,78 @@ classificazione tende a decadere poich\'e la maggior parte dei dispositivi moder
 	\item \textbf{posizione};
 	\item \textbf{parametri fisiologici e biologici}.
 \end{itemize}
+
+\subsubsection*{HID testi e caratteri}
+L'HID della classe testi e caratteri più comune è la \textbf{tastiera}.
+Tre layout sono da prendere in considerazione per le tastiere:
+\begin{itemize}
+	\itemsep-0.3em 
+	\item \textbf{layout fisico}: corrisponde al posizionamento dei tasti sulla tastiera. \`E normato.
+	\item \textbf{layout visuale}: corrisponde all'arrangiamento dei simboli che appaiono sui tasti. Ad esempio, qwerty, azerty etc.
+	\item \textbf{layout funzionale}: corrisponde all'associazione tasto-significato all'interno di un software. Ad esempio, quando si apre YouTube
+	viene messo a disposizione un layout funzionale in cui alla barra spaziatrice si fa corrispondere riproduzione e pausa.
+\end{itemize}
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics[scale=0.25]{immagini/adobe-layout-funzionale.png}
+	\caption{Esempio di layout funzionale di una tastiera su Adobe Premiere Pro.}
+\end{figure}
+
+Esistono inoltre \textbf{tastiere multifunzione}, che estendono tastiere standard con altri tasti e mappature; necessitano di driver aggiuntivi a meno
+che il produttore non le faccia apparire come una tastiera standard estesa e poi deleghi a un applicativo il compito di associare un layout funzionale
+appropriato.
+
+Un altro dispositivo HID testi e caratteri è il \textbf{lettore di codice a barre}: concretamente, è un serializzatore di caratteri. Un codice QR è un
+\textbf{barcode} bidimensionale che usa quattro modalità di encoding per salvare i dati in modo efficiente.
+
+I \textbf{tag RFID} sono formati da un transponditore radio (cioè un trasmettitore e un ricevitore radio); ne esistono di \textbf{passivi} (fanno
+energy harvesting, prendono la potenza dall'onda elettromagnetica che impatta con l'antenna dell'host; l'antitaccheggio dei negozi usano un RFID passivo)
+e di \textbf{attivi} (usano una batteria e si usano tipicamente per la geolocalizzazione).
+
+\textbf{NOTA BENE}. RFID e NFC non sono la stessa cosa: NFC permette comunicazioni bidirezionali, non è per solo input.
+
+\subsubsection*{Sistemi di puntamento}
+Sono dispositivi di input che trasferiscono input di tipo spaziale verso un computer: i movimenti fisici dell'utente vengono replicati su uno schermo
+attraverso movimenti di un puntatori e/o altri cambiamenti visivi.
+
+Si definisce in merito la \textbf{legge di Fitt} per il calcolo del tempo di movimento MT: \( MT = a + b * ID = a + b * \log_2 \frac{2D}{W} \)
+
+con \textbf{a} definito come il tempo (in secondi) necessario per iniziare o smettere di muoversi (si misura empiricamente per ciascun dispositivo),
+\textbf{b} la velocit\`a del dispositivo (si misura empiricamente per ciascun dispositivo),
+\textbf{D} la distanza dal punto iniziale al centro dell'obiettivo,
+\textbf{W} la larghezza dell'obiettivo misurata lungo l'asse su cui ci si sta muovendo.
+
+Si danno i seguenti criteri per la classificazione di dispositivi di puntamento:
+\begin{itemize}
+	\itemsep-0.3em
+	\item sulla base del \textbf{tipo di input}:
+	\vspace{-3mm}
+	\begin{itemize}
+		\itemsep-0.3em
+		\item \textbf{diretto} se il puntatore si trova nella stessa posizione fisica che il device (ad esempio, il dito su un touch screen);
+		\item \textbf{indiretto} quando traduce il movimento sullo schermo (ad esempio, il mouse o lo stilo di una tavoletta grafica).
+	\end{itemize}
+	\item sulla base del \textbf{modo in cui il movimento viene mappato} sull'interfaccia:
+	\vspace{-3mm}
+	\begin{itemize}
+		\itemsep-0.3em
+		\item \textbf{assoluto} quando il mapping tra lo spostamento nel mondo fisico viene replicato così com'è sul dispositivo;
+		\item \textbf{relativo} altrimenti.
+	\end{itemize}
+	\item sulla base di \textbf{come} i dispositivi producano il segnale sulla base dello spostamento:
+	\vspace{-3mm}
+	\begin{itemize}
+		\itemsep-0.3em
+		\item \textbf{isotonico} (stesso tono), si può muovere nello spazio e misura lo spostamento;
+		\item \textbf{isometrico} (stesso metro), è fisso e misura la forza che viene applicata;
+		\item \textbf{elastico}, la forza applicata è proporzionale allo spostamento (ad esempio, il joystick a molla).
+	\end{itemize}
+	\item sulla base della \textbf{velocità con cui si fa avanzare il puntatore}:
+	\vspace{-3mm}
+	\begin{itemize}
+		\itemsep-0.3em
+		\item \textbf{position control}, si controlla la posizione (relativa o assoluta) del puntatore;
+		\item \textbf{rate control}, si controlla la velocità e la direzione del puntatore (ad esempio, i joystick degli arcade games).
+	\end{itemize}
+\end{itemize}
