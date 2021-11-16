@@ -282,3 +282,53 @@ Si danno i seguenti criteri per la classificazione di dispositivi di puntamento:
 	\end{itemize}
 \end{itemize}
 
+Di seguito verranno elencati dispositivi di puntamento innovativi.
+
+I dispositivi \textbf{eye tracker} misurano la posizione della pupilla e i movimenti degli occhi, sono usati tipicamente nella ricerca. Ci sono vari
+modi per estrarre l'informazione sulla posizione della pupilla:
+
+\begin{figure}[!h]
+	\centering
+	\begin{subfigure}[!h]{0.3 \textwidth}
+		\centering
+		\includegraphics[scale=0.15]{immagini/bright-pupil.png}
+		\caption{Metodo bright pupil.}
+	\end{subfigure}
+	\begin{subfigure}[!h]{0.3 \textwidth}
+		\centering
+		\includegraphics[scale=0.15]{immagini/dark-pupil.png}
+		\caption{Metodo dark pupil.}
+	\end{subfigure}
+	\begin{subfigure}[!h]{0.3 \textwidth}
+		\centering
+		\includegraphics[scale=0.15]{immagini/passive-light.png}
+		\caption{Metodo passive light.}
+	\end{subfigure}
+\end{figure}
+
+\begin{itemize}
+	\itemsep-0.3em
+	\item \textbf{bright-pupil}: la sorgente illumina con luce infrarossa la pupilla, è coassiale col punto di vista.
+	\item \textbf{dark-pupil}: la sorgente illumina con luce infrarossa la pupilla, non è coassiale col punto di vista.
+	\item \textbf{passive light}: usa la luce ambientale, il consumo energetico è minimo.
+\end{itemize}
+
+Si ricorda inoltre la differenza tra eye tracking e \textbf{gaze tracking}: il secondo si occupa di capire dove il soggetto stia guardando
+riportando l'angolo della pupilla nello spazio tridimensionale in cui è inserito il soggetto (sono dunque necessarie anche angolo e posizione
+di testa e soggetto). Per rendere l'eye tracking un sistema di puntamento, questo va abbinato al gaze tracking; in merito, ci sono due
+possibilità: o si monitora la posizione della testa o si vincola la testa a un supporto.
+
+I dispositivi \textbf{dataglove} sono dei guanti che consentono di estrarre informazioni sulla posizione delle dita e l'orientamento triassiale
+della mano.
+
+I \textbf{dispositivi aptici} sono dispositivi input/output che permettono agli utenti di toccare, percepire e manipolare oggetti tridimensionali
+in ambienti virtuali (restituendo sensazioni tattili); sono usati nelle simulazioni, nel CAD 3D e in ambito medico.
+
+Altri esempi sono \textbf{smart papers} e \textbf{lavagne digitali}.
+
+\subsubsection*{Dispositivi per il suono}
+Un \textbf{microfono} è un dispositivo che converte un suono in un segnale elettrico.
+
+Un \textbf{array di microfoni} è un insieme di microfoni (tipicamente omnidirezionali) che opera in tandem, permette di riconoscere la direzione
+di provenienza dei suoni, cancellare eco e/o background noise. Dopo una trasformazione dei dati (attraverso dei microcontrollori detti DSP), l'obiettivo
+è creare uno o più microfoni virtuali.
