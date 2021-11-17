@@ -332,3 +332,57 @@ Un \textbf{microfono} è un dispositivo che converte un suono in un segnale elet
 Un \textbf{array di microfoni} è un insieme di microfoni (tipicamente omnidirezionali) che opera in tandem, permette di riconoscere la direzione
 di provenienza dei suoni, cancellare eco e/o background noise. Dopo una trasformazione dei dati (attraverso dei microcontrollori detti DSP), l'obiettivo
 è creare uno o più microfoni virtuali.
+
+Si parla molto di \textbf{interfacce vocali}, inadatte però alla maggior parte delle applicazioni: l'obiettivo in termini di design è quello di abbassare
+il carico cognitivo necessario all'utente per interagire con la piattaforma, ma la larghezza di banda (intesa come la quantità di dati trasferibile) con
+un'interfaccia vocale è di molto inferiore a quella di una GUI.
+
+\subsubsection*{Sensori di immagini}
+Un \textbf{sensore di immagini} è un digitalizzatore di radiazioni luminose, converte radiazioni luminose in una rappresentazione cromatica (tipicamente
+RGB). I sensori più comuni sono i CMOS: array di capacitori che vengono caricati o scaricati a seconda dell'attivazione del fotodiodo che viene
+impattato dalla radiazione luminosa, per ogni pixel si hanno 3 elementi sensibili, uno per il rosso, uno per il giallo e uno per il blu.
+
+Il \textbf{3D scanning} consiste nel rappresentare dimensione e posizione nello spazio tridimensionale di oggetti e ambienti, l'obiettivo principale
+è ricostruire la forma degli oggetti (il colore è secondario). Si distinguono due categorie di scanner 3D:
+\begin{itemize}
+	\itemsep-0.3em 
+	\item \textbf{passivi}: non emettono radiazioni elettromagnetiche, si affidano all'illuminazione ambientale. Di seguito, alcuni esempi:
+	\vspace{-3.mm}
+	\begin{itemize}
+		\itemsep-0.3em
+		\item \textbf{camere stereoscopiche}: usano due camere poste a una distanza focale simile a quella dell'occhio umano e, calcolando la differenza
+		nelle immagini pixel per pixel, creano una terza immagine detta ``depthmap" per creare l'illusione della profondità.
+		\item \textbf{sistemi fotometrici}: assumono l'esistenza di una sorgente luminosa controllabile e analizzando gli spostamenti delle ombre al variare
+		dell'incidenza (della sorgente luminosa) vengono calcolati sia la profondità sia il colore.
+		\item \textbf{tecniche silhouette}: tipicamente messe a disposizione anche da applicazioni per dispositivi mobili, scattando più foto dello stesso oggetto
+		da diversi angoli e usando l'accelerometro e la piattaforma iniziale posizionano i piani immagini nello spazio tridimensionale e
+		``ricostruiscono'' l'oggetto.
+	\end{itemize}
+	\item \textbf{attivi}: emettono radiazioni elettromagnetiche, tipicamente vengono usate luci, ultrasuoni o raggi x. Di seguito, alcuni esempi:
+	\vspace{-3.mm}
+	\begin{itemize}
+		\itemsep-0.3em
+		\item \textbf{time-of-flight}: inviano un impulso laser (tipicamente nell'infrarosso) e misurano il tempo di ritorno, sono estremamente precisi
+		e misurano una distanza punto-punto. La tecnologia per il calcolo del tempo di ritorno è spesso interferometrica.
+		\item \textbf{triangolazione}: inviano un impulso laser, usando l'angolo di riflessione e il disallineamento ottico tra emettitore e ricevitore,
+		permettono di ricostruire la distanza punto-punto. La tecnologia è più semplice che per time-of-flight.
+		\item \textbf{scanner 3D a luce strutturata}: proiettano una immagine geometricamente nota su un oggetto tridimensionale e analizzano la
+		deformazione indotta dall'oggetto sull'immagine per ricostruire la forma dell'oggetto (non è punto-punto, restituisce una depthmap). Viene usato
+		dal Kinect di Microsoft.
+		\item \textbf{scanner 3D a luce modulata}: proiettano una immagine che ha punto-punto una proprietà di frequenza diverse (concretamente, è come
+		fare time-of-flight in parallelo su più punti). \`E una tecnica molto poco usata.
+	\end{itemize}
+\end{itemize}
+
+\subsubsection*{Dispositivi wearable}
+Si definisce \textbf{wearable device} un sistema in cui la parte sensoriale, di interfaccia e di computing sono tutte riunite e vengono indossate
+dall'utente (ad esempio, uno smartwatch è un dispositivo wearable, un paio di cuffie bluetooth invece no) e sono tipicamente molto specializzati
+(per esempio, è il caso dei fitness trackers). I problemi tecnici principali sono il consumo di batteria e la dissipazione del calore, entrambi accentuati
+dal fatto che questi dispositivi dovrebbero restare costantemente attivi.
+
+Un dispositivo \textbf{heart rate monitor} permette di misurare il battito cardiaco dell'utente utilizzando dei \textbf{sensori PPG}: illuminando
+tipicamente un polpastrello o il polso e analizzando l'immagine riflessa, vengono estratte informazioni sulla quantità di sangue
+(NOTA: invece, i sensori ECG usano dei segnali elettrici per misurare l'espansione e la contrazione del muscolo cardiaco).
+
+Un dispositivo \textbf{EEG headset} permette di monitorare gli impulsi elettrici del cervello posizionando elettrodi non-invasivi sullo scalpo, questi
+vengono poi amplificati e digitalizzati per essere processati da un calcolatore; sono tipicamente usati come sistemi di puntamento da utenti disabili.
