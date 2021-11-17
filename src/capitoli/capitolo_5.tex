@@ -386,3 +386,146 @@ tipicamente un polpastrello o il polso e analizzando l'immagine riflessa, vengon
 
 Un dispositivo \textbf{EEG headset} permette di monitorare gli impulsi elettrici del cervello posizionando elettrodi non-invasivi sullo scalpo, questi
 vengono poi amplificati e digitalizzati per essere processati da un calcolatore; sono tipicamente usati come sistemi di puntamento da utenti disabili.
+
+\section{Natural User Interfaces}
+Una \textbf{NUI} è una interfaccia utente naturale e semplice da usare, l'interazione è diretta e consistente con il comportamento ``naturale''.
+
+Una interfaccia utente naturale è una interfaccia che è effettivamente invisibile, e resta invisibile mentre l'utente impara progressivamente ad avere
+interazioni via via più complesse (in particolare, un utente passa da novizio a esperto a velocità istantanea); si ha una drammatica riduzione della
+curva di apprendimento e una estrema semplificazione del golfo di esecuzione.
+\pagebreak
+\begin{figure}[!h]
+	\centering
+	\includegraphics[scale=0.3]{immagini/nui-concetto.png}
+\end{figure}
+
+Ci sono dei gesti di tipo touch che oramai fanno parte del background culturale, come il tocco, la lunga pressione, lo scroll, il pinch e lo swipe.
+Sono diventati intuitivi per gli utenti poich\'e le interfacce restituiscono il feedback associato molto velocemente.
+\begin{figure}[!h]
+	\centering
+	\includegraphics[scale=0.3]{immagini/nui-gesti-naturali.png}
+	\caption{Gesti naturali}
+\end{figure}
+
+La parola ``naturale'' viene usata in riferimento al goal di progettazione delle interfacce: si ambisce a offrire un'esperienza che non richieda
+la comprensione di come una macchina funzioni; si punta a un'interfaccia che si comporti come un oggetto fisico.
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics[scale=0.25]{immagini/nui-bambini.png}
+	\caption{Naturale implica nessun apprendimento.}
+\end{figure}
+
+In sintesi, perch\'e una NUI sia considerata tale si richiedono:
+\begin{itemize}
+	\itemsep-0.3em
+	\item \textbf{apprendimento progressivo};
+	\item \textbf{expertise istantanea};
+	\item \textbf{interazione diretta};
+	\item \textbf{basso carico cognitivo}.
+\end{itemize}
+
+\begin{flushleft}
+	\textit{Great design is about satisfying needs, not outsmarting users.}
+\end{flushleft}
+
+\subsection*{Reality Based Interface}
+Una strategia per la realizzazione di NUI consiste nell'uso di metodi \textbf{Reality User Interface} o \textbf{Reality Based Interface}.
+Un esempio di RUI è utilizzare un dispositivo wearable per rendere clickabili oggetti del mondo reale.
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics[scale=0.5]{immagini/rbi-esempio.png}
+\end{figure}
+
+\section{GUI}
+Il design di interfacce grafiche prende concetti dall'interaction design, dal visual design e dall'information architecture.
+
+\subsection*{Struttura dell'interfaccia}
+Descrive l'organizzazione di una interfaccia a livello di navigabilità (è la cosiddetta ``site map'' dei siti web).
+Si distinguono le seguenti strutture:
+\begin{itemize}
+	\itemsep-0.3em
+	\item \textbf{struttura gerarchica}: l'utente comincia a navigare da una pagina generale e va verso una vista sempre più di dettaglio. \`E molto
+	comune, tipicamente corrisponde a una struttura identica a quella adoperata per il database utilizzato nel backend del sistema.
+	\item \textbf{struttura sequenziale}: l'utente naviga passo per passo seguendo un percorso prestabilito; la struttura ha un ingresso e (almeno) una
+	uscita. \`E la struttura usata per gli wizard, per il setup dei router e per la creazione di nuovi account.
+	\item \textbf{struttura a matrice}: l'utente non viene vincolato a nessuna struttura, gli è permessa una navigazione molti a molti; questi sistemi
+	mettono spesso a disposizione dei navigator per potersi muovere all'interno del sistema. \`E il caso dei siti web, tra cui Wikipedia.
+	\item \textbf{struttura a database}: è il modello ``Excel" o di qualsiasi altro tool che prevede che l'utente abbia internalizzato la conoscenza del
+	tipo di dato e sia autonomamente in grado di rappresentarlo con un modello a tabella. \`E il caso dei tool utilizzati per l'analisi dei dati.
+\end{itemize}
+
+\begin{figure}[!h]
+	\begin{subfigure}[!h]{0.49 \textwidth}
+		\centering
+		\includegraphics[scale=0.3]{immagini/struttura-gerarchica.png}
+		\caption{Struttura gerarchica.}
+	\end{subfigure}
+	\begin{subfigure}[!h]{0.49 \textwidth}
+		\centering
+		\includegraphics[scale=0.18]{immagini/struttura-sequenziale.png}
+		\caption{Struttura sequenziale.}
+	\end{subfigure}
+\end{figure}
+
+\begin{figure}[!h]
+	\begin{subfigure}[!h]{0.49 \textwidth}
+		\centering
+		\includegraphics[scale=0.15]{immagini/struttura-matrice.png}
+		\caption{Struttura a matrice.}
+	\end{subfigure}
+	\begin{subfigure}[!h]{0.49 \textwidth}
+		\centering
+		\includegraphics[scale=0.3]{immagini/struttura-database.png}
+		\caption{struttura a database.}
+	\end{subfigure}
+\end{figure}
+
+Si raccomanda di \textbf{permettere spazio per crescita}/\textbf{cancellazione} e di \textbf{evitare strutture troppo larghe}/\textbf{troppo profonde}.
+
+\subsection*{Architettura dell'informazione}
+Spiega come i concetti informativi (ossia i contenuti che si vogliono trasferire all'utente) sono organizzati, serve a veicolare il modello concettuale.
+
+Le componenti principali dell'architettura dell'informazione sono:
+\begin{itemize}
+	\itemsep-0.3em
+	\item \textbf{schemi e strutture organizzative}: come viene organizzata e strutturata l'informazione.
+	\item \textbf{sistemi di labeling}: come viene rappresentata l'informazione.
+	\item \textbf{sistemi di navigazione}: come gli utenti si muovono attraverso le informazioni.
+	\item \textbf{sistemi di ricerca}: come gli utenti possono cercare informazioni.
+\end{itemize}
+
+Si distinguono due tipi di schemi organizzativi:
+\begin{itemize}
+	\itemsep-0.3em
+	\item \textbf{esatti}: organizzano le informazioni in modo oggettivo in sezioni mutuamente esclusive; alcuni esempi sono:
+	\vspace{-3mm}
+	\begin{itemize}
+		\itemsep-0.3em
+		\item \textbf{schema alfabetico}: fa uso dell'ordinamento lessicografico.
+		\item \textbf{schema cronologico}: organizza il contenuto sulla base della data.
+		\item \textbf{schema geografico}: organizza il contenuto sulla base della posizione.
+	\end{itemize}
+	\item \textbf{soggettivi}: organizzano le informazioni in un modo diverso per ogni utente (è il caso dei suggerimenti proposti da piattaforme come
+	Netflix); alcuni esempi sono:
+	\vspace{-3mm}
+	\begin{itemize}
+		\itemsep-0.3em
+		\item \textbf{topic scheme}: organizza il contenuto sulla base dell'argomento.
+		\item \textbf{task scheme}: organizza il contenuto sulla base dei bisogni, delle azioni, delle domande o dei processi che portano un utente a quel
+		contenuto.
+		\item \textbf{audience scheme}: organizza il contenuto sulla base del segmento di utenza.
+		\item \textbf{metaphor scheme}: organizza il contenuto legandolo a concetti familiari (un esempio sono le icone sul Desktop, l'immagine di un
+		cestino è associata a una certa funzionalità).
+	\end{itemize}
+\end{itemize}
+Si ricorda che è anche possibile creare schemi nuovi o mischiarne di già esistenti, nonostante - in questo caso - ci si dovrà far carico di veicolare
+il modello all'utente.
+
+\subsection*{Layout di interfacce e componenti}
+Il \textbf{Document Object Model} è una rappresentazione in un linguaggio di alto livello della struttura di un sito web o di una app che viene
+interpretata e renderizzata dal browser, \`e tipicamente organizzato come un documento gerarchico.
+
+Per i componenti delle interfacce si rimanda al seguente
+\href{https://www.usability.gov/how-to-and-tools/methods/user-interface-elements.html}{\underline{link}}.
