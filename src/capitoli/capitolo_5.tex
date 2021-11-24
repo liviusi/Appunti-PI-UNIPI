@@ -374,6 +374,12 @@ Il \textbf{3D scanning} consiste nel rappresentare dimensione e posizione nello 
 	\end{itemize}
 \end{itemize}
 
+\subsubsection*{Inertial Measurement Unit}
+Una \textbf{IMU} è un dispositivo che misura e riporta la forza, velocità angolare e orientamento di un corpo usando una combinazione di accelerometri,
+giroscopi e opzionalmente magnetometri. I dispositivi a 9 assi misurano 9 gradi di libertà combinando giroscopio a 3 assi, accelerometro a 3 assi
+e magnetometro a 3 assi nello stesso chip assieme una unità di elaborazione (``Digital Motion Processor'') capace di eseguire algoritmi
+di ``MotionFusion''.
+
 \subsubsection*{Dispositivi wearable}
 Si definisce \textbf{wearable device} un sistema in cui la parte sensoriale, di interfaccia e di computing sono tutte riunite e vengono indossate
 dall'utente (ad esempio, uno smartwatch è un dispositivo wearable, un paio di cuffie bluetooth invece no) e sono tipicamente molto specializzati
@@ -383,6 +389,8 @@ dal fatto che questi dispositivi dovrebbero restare costantemente attivi.
 Un dispositivo \textbf{heart rate monitor} permette di misurare il battito cardiaco dell'utente utilizzando dei \textbf{sensori PPG}: illuminando
 tipicamente un polpastrello o il polso e analizzando l'immagine riflessa, vengono estratte informazioni sulla quantità di sangue
 (NOTA: invece, i sensori ECG usano dei segnali elettrici per misurare l'espansione e la contrazione del muscolo cardiaco).
+I dispositivi per la misura del battito cardiaco tramite PPG utilizzano luce verde in applicazioni dove il soggetto è in movimento,
+luce rossa dove è richiesta maggiore sensibilità e risoluzione.
 
 Un dispositivo \textbf{EEG headset} permette di monitorare gli impulsi elettrici del cervello posizionando elettrodi non-invasivi sullo scalpo, questi
 vengono poi amplificati e digitalizzati per essere processati da un calcolatore; sono tipicamente usati come sistemi di puntamento da utenti disabili.
